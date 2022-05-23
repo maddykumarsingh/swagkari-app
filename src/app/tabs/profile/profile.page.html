@@ -1,5 +1,6 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
+  
     <ion-title class="ion-text-center" *ngIf="!(userLoadingStates$ | async).isLoading">
       @{{(user$ | async).username}}
     </ion-title>

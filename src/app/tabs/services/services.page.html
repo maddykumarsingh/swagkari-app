@@ -9,7 +9,17 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding" >
+
+
+  <ion-item class=" service-item ion-padding-vertical" lines="none">
+    <ion-icon slot="start" color="success" name="arrow-forward-outline"></ion-icon>
+    <ion-label class="ion-text-uppercase ion-no-margin">
+       GST Registration
+    </ion-label>
+  </ion-item>
+
+
   <ion-grid>
     <ion-row class="explore">
       <ion-col size="4" size-md="3" size-xl="2" class="explore-category" *ngFor="let explore of explores">

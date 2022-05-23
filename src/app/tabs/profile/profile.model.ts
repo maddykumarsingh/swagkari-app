@@ -2,6 +2,7 @@ import { AppStoreLoadingStatesModel } from '../../core/store/store.model';
 
 export interface ProfileModel {
   id: string;
+  fullname:string;
   firstName: string;
   lastName: string;
   avatar: string;
