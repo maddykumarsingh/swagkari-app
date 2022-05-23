@@ -12,24 +12,23 @@
 <ion-content [fullscreen]="true" class="ion-padding" >
 
 
-  <ion-item class=" service-item ion-padding-vertical" lines="none">
+  <ng-container *ngIf="services.length <= 0">
+    <ion-item class=" service-item ion-padding-vertical" *ngFor="let data of [ '','','','','' ]" lines="none">
+      <ion-icon slot="start" color="success" name="arrow-forward-outline"></ion-icon>
+      <ion-label class="ion-text-uppercase ion-no-margin">
+        <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+      </ion-label>
+    </ion-item>
+  </ng-container>
+  
+ 
+
+
+  <ion-item class=" service-item ion-padding-vertical" *ngFor="let service of services" lines="none">
     <ion-icon slot="start" color="success" name="arrow-forward-outline"></ion-icon>
     <ion-label class="ion-text-uppercase ion-no-margin">
-       GST Registration
+       {{ service.name }}
     </ion-label>
   </ion-item>
 
-
-  <ion-grid>
-    <ion-row class="explore">
-      <ion-col size="4" size-md="3" size-xl="2" class="explore-category" *ngFor="let explore of explores">
-        <ion-item lines="none" detail="false" class="explore-item" (click)="openServicePage(explore)">
-          <ion-label class="ion-text-center ion-no-margin">
-            <ion-icon [name]="explore.icon" [color]="explore.color" class="explore-category-icon"></ion-icon>
-            <h6 class="explore-category-title">{{'services.' + explore.id | translate}}</h6>
-          </ion-label>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
 </ion-content>

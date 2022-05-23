@@ -16,6 +16,8 @@ export class ServicesPage implements OnInit {
     { id: 'music_title', icon: 'musical-notes', color: 'primary', link: 'music' },
   ];
 
+  services:any[] = []
+
   constructor(private store: Store, private navController: NavController) {}
 
   openServicePage(explore) {
@@ -24,7 +26,13 @@ export class ServicesPage implements OnInit {
 
   async ngOnInit() {}
 
-  ionViewDidEnter() {}
+  ionViewDidEnter() {
+    setTimeout(() => {
+      this.services = [ { id:'' , name:'Gst Registration' },
+      { id:'' , name:'Gumasta Registration' },
+      { id:'' , name:'Pan Card Registration' }]
+    }, 2000);
+  }
 
   ionViewDidLeave() {}
 }
