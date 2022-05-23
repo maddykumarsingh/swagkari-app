@@ -33,8 +33,13 @@ const routes: Routes = [
         path: 'pin',
         loadChildren: () => import('./auth-pin/auth-pin.module').then((m) => m.AuthPinPageModule),
       },
+      {
+        path: 'otp',
+        loadChildren: () => import('./otp/otp.module').then( m => m.OtpPageModule)
+      },
     ],
   },
+  
 ];
 
 @NgModule({
