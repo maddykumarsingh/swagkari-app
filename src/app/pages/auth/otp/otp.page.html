@@ -1,9 +1,51 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>otp</ion-title>
+    <ion-title>Enter Verification Code</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true" class="auth-page">
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-text-center" size-md="6" size-lg="5" size-xs="12">
+          <div class="logo">
+            <img src="./assets/logo/TK_DEFAULT_LOGO.png" width="96px" />
+          </div>
 
+
+
+          <ion-text color="primary">
+            <h1>Enter Otp</h1>
+            <p>We have sent a OTP on your registered number or email </p>
+          </ion-text>
+
+
+          <ion-card color="light" class="auth-card ion-margin">
+            <ion-item color="light" class="ion-no-inner-padding-end">
+              <ion-input #code type="password" placeholder="Enter Code" [formControl]="otp"></ion-input>
+              <ion-button
+                slot="end"
+                fill="clear"
+                class="ion-no-margin"
+                (click)="resendOtp()"
+                *ngIf="!code.value"
+              >
+                <ion-icon slot="icon-only" color="medium" name="refresh-circle-outline"></ion-icon>
+              </ion-button>
+
+              <ion-button
+                slot="end"
+                fill="clear"
+                class="ion-no-margin"
+                (click)="check()"
+                *ngIf="code.value"
+              >
+                <ion-icon slot="icon-only" size="large" color="medium" name="arrow-forward-circle-outline"></ion-icon>
+              </ion-button>
+
+            </ion-item>
+          </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
