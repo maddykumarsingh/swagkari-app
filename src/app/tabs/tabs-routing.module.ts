@@ -17,11 +17,20 @@ const routes: Routes = [
         ],
       },
       {
+        path: 'reports',
+        loadChildren: () => import('./reports/reports.module').then( m => m.ReportsPageModule)
+      },
+      {
         path: 'services',
         children: [
           {
             path: '',
             loadChildren: () => import('./services/services.module').then((m) => m.ServicesPageModule),
+          },
+          {
+            path: 'detail/:serviceId',
+            loadChildren: () => 
+            import('../pages/service-detail/service-detail.module').then((m) => m.ServiceDetailPageModule),
           },
         ],
       },
@@ -58,7 +67,7 @@ const routes: Routes = [
         pathMatch: 'full',
       },
     ],
-  },
+  }
 ];
 
 @NgModule({

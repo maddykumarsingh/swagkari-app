@@ -8,7 +8,7 @@
     >
       <ion-icon [name]="tab.icon"></ion-icon>
       <ion-label>{{'bottomTabs.' + tab.id | translate}}</ion-label>
-      <ion-badge *ngIf="tab.badge">{{tab.badge}}</ion-badge>
+      <ion-badge color="danger" *ngIf="tab.badge">{{tab.badge}}</ion-badge>
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>

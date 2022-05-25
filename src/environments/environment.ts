@@ -3,11 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  appName: 'ionic-tk-social-network',
+  appName: 'swagkari',
   envName: 'DEV',
   production: false,
   test: false,
-  api: 'https://60bd3462b8ab3700175a03d3.mockapi.io/api',
+  api: 'https://api.swagkari.com/',
   apiVersion: 'v1',
 };
 

@@ -38,6 +38,10 @@ const routes: Routes = [
     path: '**',
     redirectTo: appConfig.routes.redirectOnNotFound,
   },
+  {
+    path: 'service-detail',
+    loadChildren: () => import('./pages/service-detail/service-detail.module').then( m => m.ServiceDetailPageModule)
+  },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],

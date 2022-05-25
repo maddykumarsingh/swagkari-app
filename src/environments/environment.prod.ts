@@ -1,8 +1,8 @@
 export const environment = {
-  appName: 'ionic-tk-social-network',
+  appName: 'swagkari',
   envName: 'PROD',
   production: true,
   test: false,
-  api: 'https://60bd3462b8ab3700175a03d3.mockapi.io/api',
+  api: 'http://api.swagkari.com/',
   apiVersion: 'v1',
 };

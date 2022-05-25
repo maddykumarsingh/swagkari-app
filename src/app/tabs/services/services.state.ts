@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { State, StateToken } from '@ngxs/store';
+import { Action, State, StateToken } from '@ngxs/store';
 import { ApiService } from '../../services/api/api.service';
 import { ServicesPageStateModel } from './services.model';
+
 
 export const initialState: ServicesPageStateModel = {
   services: {
@@ -22,4 +23,5 @@ export const STATE_TOKEN = new StateToken<ServicesPageStateModel>('services');
 @Injectable()
 export class ServicesPageState {
   constructor(private apiService: ApiService) {}
+
 }

@@ -21,8 +21,8 @@ export class ClearBadgeAction {
 export const initialState: TabsStateModel = {
   active: 'services',
   listData: [
-    { id: 'services', badge: 3, icon: 'grid-outline', disabled: false },
-    { id: 'messages', badge: 0, icon: 'chatbubble-outline', disabled: false },
+    { id: 'services', badge: 0, icon: 'grid-outline', disabled: false },
+    { id: 'reports', badge: 0, icon: 'document-outline', disabled: false },
     { id: 'profile', badge: 0, icon: 'person-circle-outline', disabled: false },
   ],
   isLoading: false,

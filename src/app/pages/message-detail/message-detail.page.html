@@ -5,7 +5,7 @@
     </ion-buttons>
     <ion-item lines="none" style="--background: transparent" *ngIf="messageDetail$ | async as messageDetail">
       <ion-avatar slot="start">
-        <img [src]="messageDetail.avatar" />
+        <img src="assets/images/dummy.jpeg" />
       </ion-avatar>
       <ion-label class="ion-no-margin">
         {{messageDetail.firstName}} {{messageDetail.lastName}}

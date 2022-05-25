@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonContent, NavController } from '@ionic/angular';
 import { Store } from '@ngxs/store';
+import { IService } from './services.model';
 
 @Component({
   selector: 'app-services',
@@ -25,6 +26,10 @@ export class ServicesPage implements OnInit {
   }
 
   async ngOnInit() {}
+
+  openServiceDetail( service:IService ){
+    this.navController.navigateForward(`/service-detail/${service.id}`)
+  }
 
   ionViewDidEnter() {
     setTimeout(() => {

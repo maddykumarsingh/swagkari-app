@@ -24,7 +24,7 @@
  
 
 
-  <ion-item class=" service-item ion-padding-vertical" *ngFor="let service of services" lines="none">
+  <ion-item (click)="openServiceDetail( service )" class=" service-item ion-padding-vertical" *ngFor="let service of services" lines="none">
     <ion-icon slot="start" color="success" name="arrow-forward-outline"></ion-icon>
     <ion-label class="ion-text-uppercase ion-no-margin">
        {{ service.name }}
