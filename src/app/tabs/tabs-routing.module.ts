@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
+import { appConfig } from '../app.config';
 
 const routes: Routes = [
   {
@@ -8,27 +9,38 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
-        loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+        path:appConfig.routes.tabs.services,
+        children:[
+          {
+            path:'',
+            loadChildren:() => import('./services/services.module').then( m => m.ServicesPageModule )
+          }
+        ]
       },
       {
-        path: 'tab2',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+        path:appConfig.routes.tabs.profile,
+        children:[
+          {
+            path:'',
+            loadChildren:() => import('./profile/profile.module').then( m => m.ProfilePageModule )
+          }
+        ]
       },
       {
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
-      },
-      {
-        path: '',
-        redirectTo: '/tabs/tab1',
-        pathMatch: 'full'
+        path:appConfig.routes.tabs.settings,
+        children:[
+          {
+            path:'',
+            loadChildren:() =>  import('./settings/settings.module').then( m => m.SettingsPageModule )
+          }
+        ]
       }
+      
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: 'tabs/services',
     pathMatch: 'full'
   }
 ];

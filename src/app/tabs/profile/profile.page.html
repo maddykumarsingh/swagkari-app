@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item class="ion-padding" lines="none" *ngIf="user$ | async let user">
+    <ion-avatar class="ion-margin-right">
+      <img [src]="'https://cvbay.com/wp-content/uploads/2017/03/dummy-image.jpg'" />
+    </ion-avatar>
+    <ion-label class="ion-text-wrap ion-text-left ion-margin">
+      <h4> {{ user.name }}</h4>
+      <p>{{ user.role }}</p>
+    </ion-label>
+    <ion-note color="success">
+      <ion-icon name="wallet-outline"></ion-icon>
+      {{ user.wallet_balance }}
+    </ion-note>
+  </ion-item>
+
+  <ion-item-divider class="ion-padding">
+    <ion-label>Bank Details</ion-label>
+  </ion-item-divider>
+
+  <ion-list class="ion-margin">
+    <ion-item lines="none">
+      <ion-label class="ion-text-wrap">
+        <h4>Bank Name: Bank of Baroda</h4>
+        <p> Account: 24480100023212 </p>
+        <p>IFSC Code: BARBJOCB</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-item-divider class="ion-padding">
+    <ion-label>Document Details</ion-label>
+  </ion-item-divider>
+
+  <ion-list class="ion-margin">
+    <ion-item lines="none">
+      <ion-label class="ion-text-wrap">
+        <h4>Document Name : Pan Card</h4>
+        <p> Code / Number : IXEPS8502J  </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+
+
+</ion-content>

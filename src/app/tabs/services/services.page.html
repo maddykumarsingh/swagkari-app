@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Our Services</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12"  *ngFor="let service of service$ | async">
+        <ion-item button routerLink="/page/service-detail/{{service.id}}" color="primary" lines="none">
+          <ion-icon slot="start" size="large" name="document-outline"></ion-icon>
+          <ion-label class="ion-text-wrap">
+            <h2>{{ service.name }}</h2>
+            <p style="font-size:10px ;">{{service.description}}</p>
+          </ion-label>
+          <ion-note>{{service.price}}</ion-note>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

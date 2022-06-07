@@ -1,0 +1,35 @@
+
+<ion-content class="ion-padding">
+
+  <ion-card>
+    <ion-list>
+      <ion-item class="ion-margin-vertical">
+        <ion-icon slot="start" size="large" name="mail-outline"></ion-icon>
+        <ion-label position="stacked">Username</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item class="ion-margin-vertical">
+        <ion-icon slot="start" size="large" name="lock-closed-outline"></ion-icon>
+        <ion-label position="stacked">Password</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-list>
+      <ion-item class="ion-margin-vertical">
+        <ion-icon size="large" slot="start" name="keypad-outline"></ion-icon>
+        <ion-label position="stacked">OTP</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-button class="ion-padding-horizontal" (click)="login()" expand="block">
+    Login
+  </ion-button>
+
+
+
+</ion-content>
