@@ -1,10 +1,24 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { appConfig } from './app.config';
 
 const routes: Routes = [
   {
-    path: '',
+    path: appConfig.routes.tabs.root ,
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path:'auth',
+    loadChildren:() => import('./auth/auth.module').then( m => m.AuthPageModule )
+  },
+  {
+    path:'page',
+    loadChildren:() => import('./page/page.module').then( m => m.PageModule)
+  },
+  {
+    path:'' ,
+    redirectTo:appConfig.routes.tabs.root,
+    pathMatch:'full'
   }
 ];
 @NgModule({
