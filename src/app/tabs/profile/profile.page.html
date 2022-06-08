@@ -16,7 +16,7 @@
     </ion-label>
     <ion-note color="success">
       <ion-icon name="wallet-outline"></ion-icon>
-      {{ user.wallet_balance }}
+      {{ user.wallet_balance | number | rupee }}
     </ion-note>
   </ion-item>
 

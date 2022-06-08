@@ -7,10 +7,11 @@ import { IonicModule } from '@ionic/angular';
 import { ServicesPageRoutingModule } from './services-routing.module';
 
 import { ServicesPage } from './services.page';
+import { CoreModule } from 'src/app/core/core.module';
 
 @NgModule({
   imports: [
-    CommonModule,
+    CoreModule,
     FormsModule,
     IonicModule,
     ServicesPageRoutingModule

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ILeads, LeadService } from 'src/app/services/lead/lead.service';
 
 @Component({
   selector: 'app-orders',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrdersPage implements OnInit {
 
-  constructor() { }
+  orders$
+
+  constructor( private service:LeadService ) { }
 
   ngOnInit() {
+    this.orders$ = this.service.get();
   }
 
 }

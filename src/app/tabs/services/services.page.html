@@ -15,7 +15,7 @@
             <h2>{{ service.name }}</h2>
             <p style="font-size:10px ;">{{service.description}}</p>
           </ion-label>
-          <ion-note>{{service.price}}</ion-note>
+          <ion-note>{{service.price | number | rupee}}</ion-note>
         </ion-item>
       </ion-col>
     </ion-row>

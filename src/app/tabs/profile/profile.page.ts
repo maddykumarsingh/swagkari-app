@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IUser, UserService } from 'src/app/services/user/user.service';
+import { IProfileUser,  UserService } from 'src/app/services/user/user.service';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class ProfilePage implements OnInit {
 
-  user$:Observable<IUser>
+  user$:Observable<IProfileUser>
 
   constructor( private service:UserService ) { }
 

@@ -27,7 +27,7 @@
         <ion-item  lines="none ion-no-padding ion-margin-top">
           <ion-icon slot="start" name="cash-outline"></ion-icon>
            <ion-label>Price</ion-label>
-           <ion-note>{{service.price}}</ion-note>
+           <ion-note>{{service.price | number | rupee }}</ion-note>
          </ion-item>
         <ion-item button routerLink="/page/lead/{{ service.id }}" lines="none ion-no-padding ion-margin-top">
           <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
