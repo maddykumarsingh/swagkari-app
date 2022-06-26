@@ -33,8 +33,8 @@ export class LeadPage implements OnInit {
       this.leadForm = this.formBuilder.group({
         name:['' , Validators.required ],
         email:['' , [ Validators.email , Validators.required ] ],
-        contact:[''],
-        rate_quoted:['' , Validators.pattern('[0-9]')],
+        contact:['', [Validators.required , Validators.pattern('^[0-9]*$')]],
+        rate_quoted:['' , Validators.pattern('^[0-9]*$')],
         remarks:[''],
         documents:this.formBuilder.array([])
       })

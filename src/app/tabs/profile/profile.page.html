@@ -8,7 +8,7 @@
 
   <ion-item class="ion-padding" lines="none" *ngIf="user$ | async let user">
     <ion-avatar class="ion-margin-right">
-      <img [src]="'https://cvbay.com/wp-content/uploads/2017/03/dummy-image.jpg'" />
+      <img [src]="user.avatar" />
     </ion-avatar>
     <ion-label class="ion-text-wrap ion-text-left ion-margin">
       <h4> {{ user.name }}</h4>
