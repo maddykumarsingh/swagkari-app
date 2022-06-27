@@ -8,9 +8,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Service } from './services/service/service';
 import { UserService } from './services/user/user.service';
-import { RupeePipe } from './pipe/rupee.pipe';
 import { CoreModule } from './core/core.module';
 import { LeadService } from './services/lead/lead.service';
+import { AuthService } from './auth/services/auth.service';
+import { HttpClientModule } from '@angular/common/http';
+import { TokenService } from './auth/services/token.service';
 
 @NgModule({
   declarations: [AppComponent ],
@@ -18,6 +20,7 @@ import { LeadService } from './services/lead/lead.service';
   imports: [ 
     BrowserModule, 
     IonicModule.forRoot(), 
+    HttpClientModule,
     AppRoutingModule,
     CoreModule
   ],
@@ -25,7 +28,9 @@ import { LeadService } from './services/lead/lead.service';
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     Service,
     UserService,
-    LeadService
+    LeadService,
+    TokenService,
+    AuthService
   ],
   bootstrap: [AppComponent],
 })

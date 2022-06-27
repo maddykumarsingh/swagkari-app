@@ -8,6 +8,7 @@ import { AuthPageRoutingModule } from './auth-routing.module';
 
 import { AuthPage } from './auth.page';
 import { HttpClientModule } from '@angular/common/http';
+import { TokenService } from './services/token.service';
 
 
 @NgModule({
@@ -18,6 +19,6 @@ import { HttpClientModule } from '@angular/common/http';
     AuthPageRoutingModule,
     HttpClientModule
   ],
-  declarations: [AuthPage]
+  declarations: [AuthPage],
 })
 export class AuthPageModule {}
